@@ -14,6 +14,7 @@ import {
 import bgImage from './assets/blurBg.png'
 import logo from './assets/shoping_bag_white.png'
 import Icon from 'react-native-vector-icons/Ionicons'
+console.disableYellowBox = true; // mrzky changes
 
 const { width : WIDTH } = Dimensions.get('window')
 
