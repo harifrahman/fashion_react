@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import {
+import React, {Component} from 'react';
+import { 
   StyleSheet,
-  Text,
+  Text, 
   View,
   ImageBackground,
   Image,
@@ -15,19 +15,19 @@ import bgImage from './assets/blurBg.png'
 import logo from './assets/shoping_bag_white.png'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-const { width: WIDTH } = Dimensions.get('window')
+const { width : WIDTH } = Dimensions.get('window')
 
 export default class App extends Component {
-  constructor() {
+  constructor(){
     super()
     this.state = {
       showPass: true,
-      press: false
+      press: false 
     }
   }
 
   showPass = () => {
-    if (this.state.press == false) {
+    if (this.state.press == false){
       this.setState({ showPass: false, press: true })
     } else {
       this.setState({ showPass: true, press: false })
@@ -42,7 +42,7 @@ export default class App extends Component {
           <Text style={styles.logoText}>F A S H I O N</Text>
         </View>
         <View style={styles.inputContainer}>
-          <Icon name={'ios-person'} size={27} color={'rgba(255, 255, 255, 0.7)'} style={styles.inputIcon} />
+          <Icon name={'ios-person'} size={28} color={'rgba(255, 255, 255, 0.7)'} style={styles.inputIcon}/> 
           <TextInput
             style={styles.input}
             placeholder={'Username'}
@@ -51,7 +51,7 @@ export default class App extends Component {
           />
         </View>
         <View style={styles.inputContainer}>
-          <Icon name={'ios-lock'} size={27} color={'rgba(255, 255, 255, 0.7)'} style={styles.inputIcon} />
+          <Icon name={'ios-lock'} size={28} color={'rgba(255, 255, 255, 0.7)'} style={styles.inputIcon}/> 
           <TextInput
             style={styles.input}
             placeholder={'Password'}
@@ -61,19 +61,19 @@ export default class App extends Component {
           />
 
           <TouchableOpacity style={styles.btnEye} onPress={this.showPass.bind(this)} >
-            <Icon name={this.state.press == false ? 'ios-eye' : 'ios-eye-off'} size={26} color={'rgba(255, 255, 255, 0.7)'} />
+            <Icon name={ this.state.press == false ? 'ios-eye' : 'ios-eye-off'} size={26} color={'rgba(255, 255, 255, 0.7)'} />
           </TouchableOpacity>
 
         </View>
 
         <TouchableOpacity style={styles.btnLogin}>
-          <Text style={styles.text}>L O G I N</Text>
+            <Text style={styles.text}>L O G I N</Text>
         </TouchableOpacity>
-
+          
         <TouchableOpacity>
-          <Text style={styles.textRegister}>REGISTER AN ACCOUNT</Text>
-        </TouchableOpacity>
-
+        <Text style={styles.text}>F O R G O T   P A S S W O R D</Text>
+        </TouchableOpacity>  
+        
       </ImageBackground>
     );
   }
@@ -87,27 +87,27 @@ const styles = StyleSheet.create({
     width: null,
     height: null,
   },
-  logo: {
+  logo:{
     width: 120,
     height: 120,
 
   },
-  logoContainer: {
+  logoContainer:{
     alignItems: 'center',
     marginBottom: 50,
 
   },
-  logoText: {
-    color: 'white',
+  logoText:{
+    color:'white',
     fontSize: 20,
     fontWeight: '500',
     marginTop: 10,
-    opacity: 0.5,
+    opacity: 0.5,  
   },
-  inputContainer: {
-    marginTop: 10,
+  inputContainer:{
+    marginTop:10,
   },
-  input: {
+  input:{
     width: WIDTH - 55,
     height: 45,
     borderRadius: 25,
@@ -117,17 +117,17 @@ const styles = StyleSheet.create({
     color: 'rgba(255, 255, 255, 0.7 )',
     marginHorizontal: 25,
   },
-  inputIcon: {
+  inputIcon:{
     position: 'absolute',
     top: 10,
     left: 37,
   },
-  btnEye: {
+  btnEye:{
     position: 'absolute',
     top: 10,
     right: 37,
   },
-  btnLogin: {
+  btnLogin:{
     width: WIDTH - 55,
     height: 45,
     borderRadius: 25,
@@ -135,16 +135,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 20
   },
-  text: {
+  text:{
     color: 'rgba(255, 255, 255, 0.7 )',
     fontSize: 16,
     textAlign: 'center',
-  },
-  textRegister:{
-    color: 'rgba(255, 255, 255, 0.7 )',
-    fontSize: 14,
-    textAlign: 'center',
-    paddingTop: 7
+
   }
 
 });
